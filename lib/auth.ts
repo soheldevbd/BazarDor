@@ -5,7 +5,7 @@ import { MongoClient } from "mongodb";
 
 // Reuse one client across hot reloads in dev. MongoClient connects lazily, so build works without a DB.
 const g = globalThis as unknown as { _mongoClient?: MongoClient };
-const client = g._mongoClient ?? new MongoClient(process.env.MONGODB_URI ?? "mongodb://localhost:27017");
+const client = g._mongoClient ?? new MongoClient(process.env.MONGODB_URI ?? " mongodb+srv://mdsohelkhan418126_db_user:ABJLBj4hSKfkdk4A@cluster0.xcy9sia.mongodb.net/");
 if (process.env.NODE_ENV !== "production") g._mongoClient = client;
 const db = client.db(process.env.MONGODB_DB || "bazardor");
 
